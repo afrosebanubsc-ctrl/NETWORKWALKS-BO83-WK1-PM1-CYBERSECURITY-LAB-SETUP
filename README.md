@@ -1,9 +1,9 @@
 # NETWORKWALKS-BO83-WK1-PM1-CYBERSECURITY-LAB-SETUP
 
-**🔐 Building My Cybersecurity Practice Lab**
+**#🔐 Building My Cybersecurity Practice Lab**
 A hands-on virtual environment created to learn cybersecurity tools, Linux networking, reconnaissance, vulnerability assessment, and penetration-testing concepts in a controlled setup
 
-**Project Overview**
+**##Project Overview**
 
 This project documents the setup of a Kali Linux cybersecurity laboratory using VirtualBox.
 
@@ -13,7 +13,9 @@ At this stage, the laboratory consists of a single Kali Linux virtual machine wi
 
 This project will serve as the foundation for future hands-on cybersecurity exercises.
 
-**Environment**
+
+**###Environment**
+
 | Component               | Configuration |
 | ----------------------- | ------------- |
 | Virtualization Platform | VirtualBox    |
@@ -27,6 +29,8 @@ This project will serve as the foundation for future hands-on cybersecurity exer
 
 <img width="1680" height="1038" alt="image" src="https://github.com/user-attachments/assets/a2ba68bf-87e3-4065-9c01-3a5b4a915ad6" />
 
+
+
 **Network Setup**
 
 For the lab, I created a dedicated NAT Network in VirtualBox instead of relying on the default VM networking configuration.
@@ -39,4 +43,7 @@ DHCP         : Enabled
 IPv6         : Disabled
 
 This provides Kali with a defined private network environment while allowing the VM to access external resources when required.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7c5f3bed-c997-4c5f-b454-bd2bc90623ab" />
+
 
