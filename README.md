@@ -66,8 +66,6 @@ Using a dedicated virtual network gives the Kali machine a defined network envir
 `````  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b1862db6-a552-4f2c-8792-4d4acb020486" />
 
 
-
-
 **# 📡 Configuring Kali Network Connectivity**
 
 
@@ -84,6 +82,8 @@ To access the network configuration settings, I opened the **NetworkManager GUI*
 ```
 
 This opened the **Network Connections** window, where I located **Wired connection 1**.
+
+
 
 **### 🔧 Configuring the IPv4 Settings**
 
@@ -260,5 +260,9 @@ Platform: VirtualBox
 Status  : Initial Environment Setup Completed
 
 This version gives you a much stronger project story: build → configure → encounter a real issue → troubleshoot it through CLI → verify → snapshot → reflect on what you learned. That's much more convincing on a GitHub portfolio than simply documenting an installation.
+
+
+
+
 
 
