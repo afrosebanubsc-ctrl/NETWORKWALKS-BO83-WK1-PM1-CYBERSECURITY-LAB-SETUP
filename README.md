@@ -118,9 +118,11 @@ Next, I checked external network connectivity:
 
 ping -c 4 8.8.8.8
 
-Finally, I tested DNS resolution:
+<img width="887" height="687" alt="image" src="https://github.com/user-attachments/assets/1c129d11-2284-4bf6-b01e-04feb0c715c2" />
 
-nslookup networkwalks.com
 
-These checks confirmed that the Kali VM had the expected IP configuration, could reach the virtual gateway, had external network connectivity, and could resolve domain names through DNS.
+Finally, I verified the internet connectivity through the Firefox browser by opening Google and NetworkWalks successfully.
+
+These checks confirmed that the Kali VM had the expected IP configuration, could reach the virtual gateway, and had working external network connectivity and DNS resolution through the browser.
+
 
