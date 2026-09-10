@@ -24,3 +24,19 @@ This project will serve as the foundation for future hands-on cybersecurity exer
 | Kali IP                 | `10.0.0.2/24` |
 | Gateway                 | `10.0.0.1`    |
 | DNS                     | `8.8.8.8`     |
+
+<img width="1680" height="1038" alt="image" src="https://github.com/user-attachments/assets/a2ba68bf-87e3-4065-9c01-3a5b4a915ad6" />
+
+**Network Setup**
+
+For the lab, I created a dedicated NAT Network in VirtualBox instead of relying on the default VM networking configuration.
+
+The network was configured with:
+
+Network Name : NatNetwork
+IPv4 Range   : 10.0.0.0/24
+DHCP         : Enabled
+IPv6         : Disabled
+
+This provides Kali with a defined private network environment while allowing the VM to access external resources when required.
+
