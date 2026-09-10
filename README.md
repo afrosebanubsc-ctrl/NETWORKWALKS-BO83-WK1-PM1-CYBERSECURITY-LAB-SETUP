@@ -100,7 +100,9 @@ DNS        : 8.8.8.8**
 
 After applying the configuration, I restarted the wired connection to make sure the changes were active.
 
-[SCREENSHOT 1 — NetworkManager GUI showing Wired connection 1 and the IPv4 settings]
+<img width="1197" height="692" alt="image" src="https://github.com/user-attachments/assets/9a380efe-1ada-4b22-b0ec-037a3ae939e3" />
+
+
 
 🔎 Verifying the Configuration
 
@@ -122,4 +124,3 @@ nslookup networkwalks.com
 
 These checks confirmed that the Kali VM had the expected IP configuration, could reach the virtual gateway, had external network connectivity, and could resolve domain names through DNS.
 
-[SCREENSHOT 2 — Terminal showing ip a, successful ping, and DNS resolution]
