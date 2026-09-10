@@ -141,11 +141,10 @@ This provides a recovery point before beginning more advanced cybersecurity expe
 
 If a future configuration or experiment causes an issue, the VM can be restored to this baseline.
 
+<img width="1915" height="1010" alt="Snapshot Screenshot" src="https://github.com/user-attachments/assets/c7e43c13-8dd6-4643-af0b-21db6288140e" />
 
 
-Show your Kali VM with the clean snapshot visible.
-
-🧠 Key Takeaways
+**🧠 Key Takeaways**
 
 This project helped me understand the practical side of preparing a cybersecurity environment.
 
@@ -155,10 +154,9 @@ I learned how to deploy and configure a dedicated Linux security environment ins
 
 Network Configuration
 
-I worked with:
+**I worked with:**
 
 IPv4 addresses
-CIDR notation
 Gateways
 DNS
 Network interfaces
@@ -170,21 +168,16 @@ One of the most useful parts of the setup was solving the Wired Connection confi
 
 Working with commands such as:
 
-nmcli connection show
-nmcli device status
-ip a
+**ip a
+nm-connection-editor**
 
 gave me a better understanding of how Kali manages network connections.
 
-Security Tools
-
-I also verified Nmap as one of the tools available for future security exercises.
-
-Snapshots
+**Snapshots**
 
 Creating a clean baseline before experimentation provides a simple way to recover the environment when something goes wrong.
 
-🚀 Next Stage
+**🚀 Next Stage**
 
 The current objective was to get the Kali Linux environment completely configured and working.
 
@@ -198,45 +191,39 @@ Web security testing
 Packet analysis
 Security-tool experimentation
 Controlled penetration-testing exercises
-⚠️ Ethical & Responsible Use
+
+
+**** Ethical & Responsible Use****
 
 This laboratory is intended for education and authorized security testing.
 
 Any scanning, vulnerability assessment, or penetration-testing activity should only be performed against systems that I own or have explicit permission to test.
 
-📸 Project Documentation
+
+**📸 Project Documentation**
 
 The following screenshots provide evidence of the setup process:
 
-#	Screenshot
+**#	Screenshot**
 01	Kali VM in VirtualBox
 02	Kali VM system configuration
 03	Kali VM network adapter
 04	NAT Network configuration
-05	nmcli connection show
-06	nmcli device status
-07	ip a showing Kali IP
-08	Ping and DNS verification
-09	Nmap version
+05	ip a showing Kali IP, ping 
+08	Browsing inside kali firefox
 10	Clean Kali snapshot
 
-Tip: You don't need to make every screenshot huge. Crop each one so the relevant configuration or terminal output is clearly visible.
+**🔗 Resources**
+7-Zip: https://www.7-zip.org/
+VirtualBox: https://www.virtualbox.org/
+Kali Linux: https://www.kali.org/get-kali/#kali-platforms
 
-🔗 Resources
-7-Zip: [Official 7-Zip Website]
-VirtualBox: [Official VirtualBox Website]
-Kali Linux: [Official Kali Linux Website]
-👤 Author
-
-[YOUR NAME]
-
-[Your Role / Program]
-
-LinkedIn: [YOUR LINKEDIN PROFILE]
+**👤 Author**
+Afrose S
 
 📌 Project Details
-Program : [Program Name]
-Week    : [Week Number]
+Program : Networkwalks Cybersecurity Internship Program - 2026
+Week    : (Week 1)
 Project : Kali Linux Cybersecurity Lab
 Platform: VirtualBox
 Status  : Initial Environment Setup Completed
