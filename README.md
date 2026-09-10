@@ -14,7 +14,7 @@ This setup serves as the starting point for future hands-on cybersecurity exerci
 
 **🎯 Project Goals**
 
-The main goals of this setup were to:
+**The main goals of this setup were to:**
 
 Deploy Kali Linux inside VirtualBox
 Configure the virtual machine resources
@@ -48,7 +48,7 @@ Kali Linux was imported into VirtualBox and prepared as the main machine for the
 
 Before starting the lab, I reviewed the VM configuration and allocated the available resources according to the requirements of the system.
 
-****VM Configuration**
+**VM Configuration**
 
 **🌐 Creating the Virtual Network**
 
@@ -64,6 +64,8 @@ IPv6         : Disabled
 Using a dedicated virtual network gives the Kali machine a defined network environment and makes it easier to control and document its connectivity.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fae69d8b-e480-40b5-b665-da79a75f4fd5" />
+
+
 
 
 **📡 Configuring Kali Network Connectivity**
@@ -87,6 +89,7 @@ This opened the Network Connections window, where I located Wired connection 1.
 <img width="1351" height="642" alt="image" src="https://github.com/user-attachments/assets/dec9c93e-af60-4998-bec5-93f4c369abc0" />
 
 
+
 I opened the settings for Wired connection 1 and navigated to:
 
 **IPv4 Settings → Method → Manual**
@@ -104,19 +107,19 @@ After applying the configuration, I restarted the wired connection to make sure 
 
 
 
-🔎 Verifying the Configuration
+**🔎 Verifying the Configuration**
 
 After applying the settings, I returned to the terminal and verified the assigned IP address:
 
-ip a
+**ip a**
 
 I then tested connectivity to the virtual gateway:
 
-ping -c 4 10.0.0.1
+**ping -c 4 10.0.0.1**
 
 Next, I checked external network connectivity:
 
-ping -c 4 8.8.8.8
+**ping -c 4 8.8.8.8**
 
 <img width="887" height="687" alt="image" src="https://github.com/user-attachments/assets/1c129d11-2284-4bf6-b01e-04feb0c715c2" />
 
@@ -148,11 +151,11 @@ If a future configuration or experiment causes an issue, the VM can be restored 
 
 This project helped me understand the practical side of preparing a cybersecurity environment.
 
-Virtualization
+**Virtualization**
 
 I learned how to deploy and configure a dedicated Linux security environment inside VirtualBox.
 
-Network Configuration
+**Network Configuration**
 
 **I worked with:**
 
@@ -193,7 +196,7 @@ Security-tool experimentation
 Controlled penetration-testing exercises
 
 
-**** Ethical & Responsible Use****
+**Ethical & Responsible Use**
 
 This laboratory is intended for education and authorized security testing.
 
@@ -221,7 +224,7 @@ Kali Linux: https://www.kali.org/get-kali/#kali-platforms
 **👤 Author**
 Afrose S
 
-📌 Project Details
+**📌 Project Details**
 Program : Networkwalks Cybersecurity Internship Program - 2026
 Week    : (Week 1)
 Project : Kali Linux Cybersecurity Lab
