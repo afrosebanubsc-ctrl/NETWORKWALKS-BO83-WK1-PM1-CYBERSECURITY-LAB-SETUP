@@ -2,7 +2,7 @@
 
 A hands-on virtual environment built to practice cybersecurity concepts, Linux networking, reconnaissance, vulnerability assessment, and security tools in a controlled setup.
 
-🧭 Project Overview
+**🧭 Project Overview**
 
 This project documents the process of setting up a Kali Linux virtual laboratory using VirtualBox.
 
@@ -12,7 +12,7 @@ The current lab contains a single Kali Linux virtual machine connected to a dedi
 
 This setup serves as the starting point for future hands-on cybersecurity exercises.
 
-🎯 Project Goals
+**🎯 Project Goals**
 
 The main goals of this setup were to:
 
@@ -27,7 +27,8 @@ Create a clean VM snapshot
 Document troubleshooting steps
 Establish a stable environment for future cybersecurity practice
 
-🧰 Lab Environment
+**🧰 Lab Environment**
+
 Component	Configuration
 Virtualization Platform	VirtualBox
 Operating System	Kali Linux
@@ -38,30 +39,16 @@ Kali IP	10.0.0.2/24
 Gateway	10.0.0.1
 DNS	8.8.8.8
 
-[SCREENSHOT 1 — VirtualBox Manager showing your Kali Linux VM]
+<img width="1680" height="1038" alt="image" src="https://github.com/user-attachments/assets/d456281e-062f-4062-94ec-b0ce687f6852" />
 
-Add a screenshot where your Kali VM is visible in VirtualBox.
 
-🐉 Kali Linux Virtual Machine
+**🐉 Kali Linux Virtual Machine**
 
 Kali Linux was imported into VirtualBox and prepared as the main machine for the cybersecurity laboratory.
 
 Before starting the lab, I reviewed the VM configuration and allocated the available resources according to the requirements of the system.
 
-VM Configuration
-Operating System : Kali Linux
-Memory           : 2048 MB
-Network Adapter  : Adapter 1
-Network Mode     : NAT Network
-Network          : NatNetwork
-
-[SCREENSHOT 2 — Kali VM System settings]
-
-Show the memory/RAM allocation and other relevant VM settings.
-
-[SCREENSHOT 3 — Kali VM Network settings]
-
-Show Adapter 1 connected to NatNetwork.
+****VM Configuration**
 
 🌐 Creating the Virtual Network
 
@@ -76,7 +63,7 @@ IPv6         : Disabled
 
 Using a dedicated virtual network gives the Kali machine a defined network environment and makes it easier to control and document its connectivity.
 
-[SCREENSHOT 4 — NAT Network configuration]
+
 
 Capture the VirtualBox Network Manager showing NatNetwork and the 10.0.0.0/24 network.
 
@@ -180,17 +167,6 @@ This verifies that domain-name resolution is working.
 
 Add a terminal screenshot showing the successful ping and DNS results.
 
-🧰 Verifying Nmap
-
-As part of the initial security-tool setup, I verified that Nmap was installed and available.
-
-nmap --version
-
-This confirmed that Nmap was ready to be used for future network-security exercises.
-
-[SCREENSHOT 9 — Nmap version output]
-
-Add the terminal screenshot showing the installed Nmap version.
 
 💾 Creating a Clean Snapshot
 
