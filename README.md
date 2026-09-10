@@ -63,112 +63,89 @@ IPv6         : Disabled
 
 Using a dedicated virtual network gives the Kali machine a defined network environment and makes it easier to control and document its connectivity.
 
+`````  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b1862db6-a552-4f2c-8792-4d4acb020486" />
 
 
-Capture the VirtualBox Network Manager showing NatNetwork and the 10.0.0.0/24 network.
 
-📡 Configuring Kali Network Connectivity
 
-After starting Kali Linux, I checked the available network interfaces from the terminal.
+**# 📡 Configuring Kali Network Connectivity**
 
-ip a
 
-The initial plan was to configure the network through the graphical Wired Connection settings.
+After starting Kali Linux, I checked the available network interfaces using:
 
-However, I encountered an issue during this step.
+```bash
+**ip a**
+```
 
-🐞 Troubleshooting: Wired Connection Settings Not Opening
+To access the network configuration settings, I opened the **NetworkManager GUI** directly from the terminal:
 
-The Wired Connection settings window was not opening correctly through the graphical interface.
+```bash
+**nm-connection-editor**
+```
 
-Instead of continuing to troubleshoot the GUI, I used Kali's terminal and configured the connection through NetworkManager's nmcli command-line utility.
+This opened the **Network Connections** window, where I located **Wired connection 1**.
 
-This also gave me a better opportunity to understand how network configuration works from the Linux terminal.
+**### 🔧 Configuring the IPv4 Settings**
 
-Step 1 — Identify the Connection
+I opened the settings for **Wired connection 1** and navigated to:
 
-First, I listed the available NetworkManager connections:
+**IPv4 Settings → Method → Manual**
 
-nmcli connection show
+I configured the following values:
 
-This displayed the available connections and allowed me to identify the wired connection name.
-
-[SCREENSHOT 5 — nmcli connection show output]
-
-Add the screenshot showing your actual wired connection name.
-
-Step 2 — Check the Network Device
-
-I then checked the status of the network interfaces:
-
-nmcli device status
-
-This helped confirm which interface was connected and which NetworkManager connection it was using.
-
-[SCREENSHOT 6 — nmcli device status output]
-
-Step 3 — Configure the IPv4 Settings
-
-The network configuration was then applied directly through nmcli.
-
-sudo nmcli connection modify "Wired connection 1" ipv4.method manual ipv4.addresses 10.0.0.2/24 ipv4.gateway 10.0.0.1 ipv4.dns 8.8.8.8
-
-The configuration used:
-
-IP Address : 10.0.0.2/24
+```text
+IP Address : 10.0.0.2
+Netmask    : 255.255.255.0
 Gateway    : 10.0.0.1
 DNS        : 8.8.8.8
+```
 
-Important: Wired connection 1 is only an example. Use the connection name shown by nmcli connection show on your Kali installation.
+After applying the configuration, I restarted the wired connection to make sure the changes were active.
 
-Step 4 — Restart the Network Connection
+**[SCREENSHOT 1 — NetworkManager GUI showing Wired connection 1 and the IPv4 settings]**
 
-After modifying the connection, I restarted it:
+### 🔎 Verifying the Configuration
 
-sudo nmcli connection down "Wired connection 1"
-sudo nmcli connection up "Wired connection 1"
+After applying the settings, I returned to the terminal and verified the assigned IP address:
 
-This applied the updated configuration.
-
-Step 5 — Verify the IP Address
-
-The configuration was then checked using:
-
+```bash
 ip a
+```
 
-The expected address was:
+I then tested connectivity to the virtual gateway:
 
-10.0.0.2/24
+```bash
+ping -c 4 10.0.0.1
+```
 
-[SCREENSHOT 7 — ip a showing your Kali IP]
+Next, I checked external network connectivity:
 
-Make sure the IP address and active interface are clearly visible.
+```bash
+ping -c 4 8.8.8.8
+```
 
-🔎 Testing the Network
+Finally, I verified the network connectivity by opening **Firefox** inside Kali Linux and successfully accessing:
 
-After configuring the interface, I performed several tests to confirm that the network was functioning correctly.
+* **NetworkWalks**
+* **Google**
 
-Test 1 — Gateway
-ping 10.0.0.1
+This confirmed that the Kali VM had working internet connectivity and that websites could be reached successfully through the configured network.
 
-This checks communication between Kali and the virtual network gateway.
+**[SCREENSHOT 2 — Firefox showing NetworkWalks and Google successfully opened]**
 
-Test 2 — External Connectivity
-ping 8.8.8.8
+```
 
-This verifies that Kali can reach an external IP address.
+These checks confirmed that the Kali VM had the expected IP configuration, could reach the virtual gateway, had external network connectivity, and could resolve domain names through DNS.
 
-Test 3 — DNS Resolution
-nslookup networkwalks.com
+**[SCREENSHOT 2 — Terminal showing `ip a`, successful ping, and DNS resolution]**
 
-This verifies that domain-name resolution is working.
+**### 💡 What I Learned**
 
-[SCREENSHOT 8 — Network connectivity tests]
+Instead of relying only on the graphical interface, I learned how to launch Kali's NetworkManager configuration directly from the terminal using `nm-connection-editor`.
 
-Add a terminal screenshot showing the successful ping and DNS results.
+I also verified the configuration from the command line using `ip a`, `ping`, and `nslookup`, giving me a clear understanding of how the VM's network configuration connects to actual network connectivity.
 
-
-💾 Creating a Clean Snapshot
+****💾 Creating a Clean Snapshot****
 
 Once the Kali installation, network configuration, and basic testing were complete, I created a VirtualBox snapshot.
 
