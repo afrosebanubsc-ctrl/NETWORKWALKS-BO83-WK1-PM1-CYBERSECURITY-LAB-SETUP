@@ -84,6 +84,9 @@ To access the network configuration settings, I opened the NetworkManager GUI di
 
 This opened the Network Connections window, where I located Wired connection 1.
 
+<img width="1351" height="642" alt="image" src="https://github.com/user-attachments/assets/dec9c93e-af60-4998-bec5-93f4c369abc0" />
+
+
 I opened the settings for Wired connection 1 and navigated to:
 
 **IPv4 Settings → Method → Manual**
